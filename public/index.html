@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="index.js" defer></script>
+	 <!-- Compiled and minified CSS -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	 <!-- Compiled and minified JavaScript -->
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<title>Animals register</title>
+	<style>
+		.change:focus{
+			color: aquamarine;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="section">
+			<h1>Animals register</h1>
+			<h2>New Animal</h2>
+			<form id="form-animal">
+				<div class="row">
+					<div class="col s12">
+						<input type="text" id="name" placeholder="Name" required>
+					</div>
+					<div class="col s12 m4">	
+						<input id="age" type="text" placeholder="Age"
+						onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+					</div>
+					
+					<div class="col s12 m4">
+						<input type="text" id="color" placeholder="Color" required>
+					</div>
+					<div class="col s12 m1">
+						<p>
+							<label>
+							  <input id="genderM" class="gender" name="gender" type="radio" value="M" />
+							  <span>Macho</span>
+							</label>
+						  </p>
+						  <p>
+							<label>
+							  <input id="genderF" class="gender" name="gender" type="radio" value="F"/>
+							  <span>Femea</span>
+							</label>
+						  </p>
+						
+					</div>
+					
+
+					<div class="col s12">
+						<input class="btn waves-effect waves-light btn-large" type="submit"/>
+						<input id="btn_reset" class="btn waves-effect waves-light btn-large" type="reset" />
+					</div>
+				</div>
+			</form>
+			
+		</div>
+		<div class="section">
+			<h2>
+				Animals Saveds
+			</h2>
+			<ul id="list-animals">
+				<div id="div-list-animals" class="row">
+
+				</div>
+			</ul>
+		</div>
+	</div>
+
+	
+</body>
+</html>
